@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Media Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile {
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .social-link {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: linear-gradient(rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            left: -110%;
+            top: -10%;
+            transition: all 0.4s ease;
+        }
+
+        .social-link:hover::before {
+            left: 110%;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+
+        .threads {
+            background: linear-gradient(45deg, #000000, #454545, #a1a1a1, #ffffff);
+            background-size: 300% 300%;
+            animation: threadsGradient 4s ease infinite;
+        }
+
+        .threads-logo {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        @keyframes threadsGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .youtube {
+            background: #FF0000;
+        }
+
+        .linkedin {
+            background: #0077B5;
+        }
+
+        .discord {
+            background: #5865F2;
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .social-link {
+                width: 60px;
+                height: 60px;
+                font-size: 25px;
+            }
+            
+            .threads-logo {
+                width: 25px;
+                height: 25px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Johns Jose</h1>
+            <p>Connect with me on social media</p>
+        </div>
+
+        <div class="social-links">
+            <!-- Replace # with your actual profile links -->
+            <a href="https://www.instagram.com/johns_jose_?igsh=NGMwZm4zbXg2MGVt" class="social-link instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://threads.net/@_johns_jose__" class="social-link threads" target="_blank">
+                <img alt="Threads" class="threads-logo">
+            </a>
+            <a href="https://www.youtube.com/@jjmoveshere" class="social-link youtube" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/johns-jose-26b334328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " class="social-link linkedin" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://discord.com/invite/NRHSBr6g" class="social-link discord" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+
+        <div class="footer">
+            © 2025 My Social Hub @Johns_Jose | All Rights Reserved
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
